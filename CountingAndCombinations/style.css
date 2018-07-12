@@ -14,7 +14,12 @@
     height: 100px;
     margin-right: 10px;
 }
-
+input{
+    width:60px;
+}
+th{
+    background-color: aliceblue;
+}
 td{
     padding:4px;
 }

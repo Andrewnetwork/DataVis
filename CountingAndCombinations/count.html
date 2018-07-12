@@ -17,8 +17,13 @@
         $$\LARGE \text{n choose k} = \binom{n}{k} = \frac{n!}{k!(n-k)!}  \tag{Binomial coefficient} $$
       </div>
       <div id="controls">
-        <label>n: </label><input id="n" type="text"/>
-        <label>k: </label><input id="k" type="text"/>
+        <label>n: </label><input value="5" id="n" type="text"/>
+        <label>k: </label><input value="3" id="k" type="text"/>
+        <label>b: </label><input value="2" id="b" type="text"/>
+        <select id="visSel">
+          <option value="ct">Make Count Tables</option>
+          <option value="kbc">k Base Count</option>
+        </select>
         <button onclick="goHandler()">Go!</button>
         <button onclick="resetHandler()">Reset</button>
       </div>

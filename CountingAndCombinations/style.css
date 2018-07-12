@@ -1,0 +1,28 @@
+#controls{
+    text-align: center;
+    font-size: 20px;
+}
+#countTable{
+    font-size:12px;
+    margin-top:10px; 
+    margin-left: 20px;
+}
+#outBar{
+    width: 20px;
+    background-color: bisque;
+    float: left;
+    height: 100px;
+    margin-right: 10px;
+}
+
+td{
+    padding:4px;
+}
+
+table {
+    /*margin: 0 auto;*/
+    border-collapse: collapse;
+    float:left;
+    margin-right: 10px;
+}
+

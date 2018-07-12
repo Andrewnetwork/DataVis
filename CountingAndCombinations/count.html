@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <title>Embedded_Template</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <link rel="stylesheet" href="style.css">
+    <script src='counter.js'></script>
+  </head>
+  <body>
+      <!-- ### Put your HTML here ### -->
+      <center>
+        <img height="100" width="80" src="https://vignette.wikia.nocookie.net/muppet/images/2/22/CountVonCount.png/revision/latest?cb=20150116064552" />
+      </center>
+      <div id="topFormula">
+        $$\LARGE \text{n choose k} = \binom{n}{k} = \frac{n!}{k!(n-k)!}  \tag{Binomial coefficient} $$
+      </div>
+      <div id="controls">
+        <label>n: </label><input id="n" type="text"/>
+        <label>k: </label><input id="k" type="text"/>
+        <button onclick="goHandler()">Go!</button>
+        <button onclick="resetHandler()">Reset</button>
+      </div>
+      <div id="countTable"></div>
+  </body>
+</html>

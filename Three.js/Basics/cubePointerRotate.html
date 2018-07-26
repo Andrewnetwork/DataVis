@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cube Pointer</title>
+		<style>
+			body { margin: 0; }
+			canvas { width: 100%; height: 100% }
+		</style>
+	</head>
+	<body>
+		<script src="../three.js"></script>
+		<script>
+			var scene = new THREE.Scene();
+			var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+
+			var renderer = new THREE.WebGLRenderer();
+			renderer.setSize( window.innerWidth, window.innerHeight );
+			document.body.appendChild( renderer.domElement );
+
+			var geometry = new THREE.BoxGeometry( 1, 1, 1 );
+			var material = new THREE.MeshNormalMaterial( { overdraw: 0.5 } );
+			var cube = new THREE.Mesh( geometry, material );
+			
+
+			var geometry = new THREE.BoxGeometry( 2, 0.5, 0.5 );
+			var material = new THREE.MeshNormalMaterial( { overdraw: 0.5 } );
+			var pointer = new THREE.Mesh( geometry, material );
+			pointer.position.x += 1;
+			
+			var group = new THREE.Group();
+			group.add(cube);
+			group.add(pointer);
+			
+			scene.add(group);
+			camera.position.z = 5;
+
+			var animate = function () {
+				requestAnimationFrame( animate );
+
+				group.rotation.z += 0.01;
+				group.rotation.x += 0.01;
+				group.rotation.y += group.rotation.z + group.rotation.x;
+
+				renderer.render( scene, camera );
+			};
+
+			animate();
+		</script>
+	</body>
+</html>
